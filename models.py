@@ -3,7 +3,7 @@ from sqlalchemy import Column,Integer,Boolean,Text,String,ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy_utils.types import ChoiceType
 
-
+#run this accoording to your database
 class User(Base):
     __tablename__='user'
     id=Column(Integer,primary_key=True)
@@ -45,4 +45,5 @@ class Order(Base):
     user=relationship('User',back_populates='orders')
 
     def __repr__(self):
+
         return f"<Order {self.id}>"
