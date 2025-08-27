@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
-
+#main app to run this file 
 
 class SignUpModel(BaseModel):
     id:Optional[int]
@@ -62,4 +62,5 @@ class OrderStatusModel(BaseModel):
             "example":{
                 "order_status":"PENDING"
             }
+
         }
